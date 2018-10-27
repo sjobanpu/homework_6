@@ -9,17 +9,18 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <script src=“bunbun.js“ type="text/javascript"></script>
 </head>
-<body>
-<!--navigation bar with links-->
-        <div>
+<body onload="numberOfOrders()">
+    <div>
         <ul>
           <li class="Icon1"><a href="homepage.html">
                 <img src="cinnamon.png" width="50" height="40" alt="home button"></a></li>
-          <li><a href="HowitWorks.asp">How it Works</a></li>
-          <li><a href="Shipping&Pricing.asp">Shipping & Pricing</a></li>
-          <li><a href="AboutUs.asp">About Us</a></li>
+          <li><a href="How it Works.asp">How it Works</a></li>
+          <li><a href="Shipping & Pricing.asp">Shipping & Pricing</a></li>
+          <li><a href="About Us.asp">About Us</a></li>
           <li><a href="product_browsing.html">Product Offerings</a></li>
-          <li class="Icon2"><img src="cart.png" width="35" height="35" alt="number of items in cart"></li>
+          <li class="Icon2"><a href="cart.html">
+            <img src="cart.png" width="35" height="30" alt="number of items in cart"></a></li>
+          <li id="number"></li>
         </ul>
     </div>
 <!--all the cards with the product offerings, divided into two separate rows of offerings-->
