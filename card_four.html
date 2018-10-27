@@ -25,17 +25,20 @@ html>
       <span class="nowrap">&nbsp;&nbsp;&nbsp;Spicy and flavorful&nbsp;for those who &nbsp;enjoy&nbsp;savory treats&nbsp;our&nbsp;pecan spice roll &nbsp;is the&nbsp;perfect fit.</span>
     </div>
     <div><img class="views" src="pecan.png" alt="multiple views of pumpkinpecan"></div>
-    <div class="Buttons">
-          <p>
-            <label>Quantity</label>
-            <input>
-          </p>
-          <p>
-            <label>Glazing</label>
-            <input>
-          </p>
-    </div>
     <div class="AddCart">
         <h2>
-            <button type="button"  style="width:100px;height:40px" onclick="alert('Product has been added to cart')">Add to Cart</button></h2>
-    </div>
+          <button type="button"  style="width:100px;height:40px" onclick="addToCart()">Add to Cart</button></h2>
+    <div class="Customization_Options">
+    <p id="rolling">
+      Pecan Spice
+    </p>
+    <select id="quantity">
+      <option value="3">3</option>
+      <option value="6">6</option>
+      <option value="12">12</option>
+    </select>
+    <select id="glazing">
+      <option value="None">None</option>
+      <option value="Double-Chocolate">Double Chocolate</option>
+      <option value="Milk-Sugar">Milk Sugar</option>
+    </select>

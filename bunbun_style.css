@@ -28,8 +28,12 @@ h1 {
     text-align:center;
     color:white;
     height:400px;
+    font-family: 'Charmonman',cursive;
 }
 
+.localCart{
+    font-size:16px;
+}
 
 .main-title{
     position:absolute;
@@ -282,6 +286,4 @@ li a:hover {
 
 #number{
   color:white;
-  position:absolute;
-  padding-right:30px;
 }

@@ -17,24 +17,19 @@ function addToCart(){
 
 function loadData(){
   document.getElementById("localCart").innerHTML=localStorage.getItem("cart");
-  // var cart = localStorage.getItem("cart");
-  // var cartObject = JSON.parse(cart);
-  // for (var i = 0; i < cart.length; i++) {
-  //   console.log(cartObject[i].glazing);
   }
 
 function numberOfOrders(){
-  console.log(document.getElementById("number"));
   document.getElementById("number").innerHTML=JSON.parse(localStorage.cart).length;
 }
 
-// var cartObjects;
-var items;
-function cartPage(){
-  cart = localStorage.getItem("cart");
-  items = JSON.parse("cart");
-  loadData();
-  //cartObjects=JSON.parse(cart)
+function makeTable(){
+  var cartObject=JSON.parse(cart);
+  for (var i = 0; i < cart.length; i++) {
+    document.getElementById("glazing").innerHTML=cartObject[i].glazing
+    document.getElementById("rolling").innerHTML=cartObject[i].rolling
+    document.getElementById("quantity").innerHTML=cartObject[i],quantity
+  }
 }
 
 
