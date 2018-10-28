@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: aliceblue;
+  font-family: 'Charmonman',cursive;
+}
+
+.Shopping-Cart {
+  width: 750px;
+  height: 600px;
+  margin: 80px auto;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  height: 60px;
+  border-bottom: 1px solid #E1E8EE;
+  padding: 20px 30px;
+  color: #5E6977;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.item {
+  padding: 20px 30px;
+  height: 120px;
+  display: flex;
+}
+
+.item:nth-child(3) {
+  border-top:  1px solid #E1E8EE;
+  border-bottom:  1px solid #E1E8EE;
+}
+
+.buttons {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 60px;
+}
+.delete_button{
+  display: inline-block;
+  Cursor: pointer;
+}
+.delete_button {
+  width: 18px;
+  height: 17px;
+  background: url("delete-icn.svg") no-repeat center;
+}
+
+}
+.image {
+  margin-right: 50px;
+}
+
+Let’s add some basic style to  product name and description.
+.glazing {
+  padding-top: 10px;
+  margin-right: 60px;
+  width: 115px;
+}
+
+.glazing span {
+  display: block;
+  font-size: 14px;
+  color: #43484D;
+  font-weight: 400;
+}
+
+.glazing span:first-child {
+  margin-bottom: 5px;
+}
+.glazing span:last-child {
+  font-weight: 300;
+  margin-top: 8px;
+  color: #86939E;
+}
+.quantity {
+  padding-top: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+
+}
+.quantity input {
+  -webkit-appearance: none;
+  border: none;
+  text-align: center;
+  margin-right: 2px;
+  width: 32px;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+button[class*=btn] {
+  width: 30px;
+  height: 30px;
+  background-color: #E1E8EE;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.minus_button img {
+  margin-bottom: 3px;
+}
+.add_button img {
+  margin-top: 2px;
+}
+
+button:focus,
+input:focus {
+  outline:0;
+}
+
+.total-price {
+  width: 83px;
+  padding-top: 27px;
+  text-align: center;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+@media (max-width: 800px) {
+  .Shopping-Cart {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .item {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .quantity,
+  .glazing {
+    width: 100%;
+    text-align: center;
+    margin: 6px 0;
+  }
+  .buttons {
+    margin-right: 20px;
+  }
+}

@@ -5,12 +5,19 @@
     <title>shopping_cart</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="bunbun_style.css">
+    <link rel="stylesheet" type="text/css" href="cart.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <script src="bunbun.js" type="text/javascript"></script>
+    <script src="roll1.js" type="text/javascript"></script>
+    <script src="roll2.js" type="text/javascript"></script>
+    <script src="roll3.js" type="text/javascript"></script>
+    <script src="roll4.js" type="text/javascript"></script>
+    <script src="roll5.js" type="text/javascript"></script>
+    <script src="roll6.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
-<body onload="loadData()">
+<body onload="numberOfOrders()">
 <!--navigation bar with links-->
   <div id="localCart">
       <ul>
@@ -20,16 +27,205 @@
         <li><a href="Shipping&Pricing.asp">Shipping & Pricing</a></li>
         <li><a href="AboutUs.asp">About Us</a></li>
         <li><a href="product_browsing.html">Product Offerings</a></li>
-        <li class="Icon2"><img src="cart.png" width="35" height="35" alt="number of items in cart"></li>
+        <li class="Icon2"><img src="cart.png" width="35" height="35" alt="number of items in cart">
+        </li>
+        <li id="number"></li>
       </ul>
     </div>
     <div class="NavigationOptions">
       <span class="nowrap">&nbsp;&nbsp;&nbsp;My Cart&nbsp;&nbsp;&nbsp;&nbsp;<a href="product_browsing.html">Continue Shopping</a></span>
     </div>
-    <div class="RowsforShoppingPage">
-      <div class="productColumn" id="rolling"></div>
-      <div class="glazeColumn" id="glazing"></div>
-      <div class="quantityColumn" id="quantity"></div>
-      <div class="totalColumn"></div>
+    <div class="Shopping-Cart"></div>
+     <!-- Product #1 ------------------------------------------------------------------------->
+      <div class="rolls" id="orangeMarmalade"></div>
+      <div class="buttons">
+      <span class="delete_button" onclick="remove()"></span>
+      </div>
+
+    <div class="image">
+      <img src="orange2.png" alt="" />
     </div>
+
+    <div class="glazing">
+      <span>None</span>
+      <span>Double Chocolate</span>
+      <span>Milk Sugar</span>
+    </div>
+
+ <!--    <div class="size">
+      <span>3</span>
+      <span>6</span>
+      <span>12</span> -->
+
+    <div class="quantity">
+      <button class="add_button" type="button" name="button">
+        <img src="add.png" alt="" />
+      </button>
+      <input id="orangeMarmaladeRoll type="text" name="name" value="0">
+      <button class="minus_button" type="button" name="button">
+        <img src="minus.png" alt="" />
+      </button>
+    </div>
+    <div class="total-price">$10.99</div>
+  </div>
+     <!-- Product #2 ------------------------------------------------------->
+      <div class="rolls" id="pumpkinPecan"></div>
+      <div class="buttons">
+      <span class="delete_button" onclick="remove2()"></span>
+      </div>
+
+    <div class="image">
+      <img src="pecan.jpg" alt="" />
+    </div>
+
+    <div class="glazing">
+      <span>None</span>
+      <span>Double Chocolate</span>
+      <span>Milk Sugar</span>
+    </div>
+
+ <!--    <div class="size">
+      <span>3</span>
+      <span>6</span>
+      <span>12</span> -->
+
+    <div class="quantity">
+      <button class="add_button" type="button" name="button">
+        <img src="add.png" alt="" />
+      </button>
+      <input id="pumpkinPecanRoll type="text" name="name" value="0">
+      <button class="minus_button" type="button" name="button">
+        <img src="minus.png" alt="" />
+      </button>
+    </div>
+    <div class="total-price">$10.99</div>
+  </div>
+     <!-- Product #3 ------------------------------------------------------->
+  <div class="rolls" id="originalCinnamon"></div>
+    <div class="buttons">
+    <span class="delete_button" onclick="remove3()"></span>
+    </div>
+
+    <div class="image">
+      <img src="original.jpeg" alt="" />
+    </div>
+
+    <div class="glazing">
+      <span>None</span>
+      <span>Double Chocolate</span>
+      <span>Milk Sugar</span>
+    </div>
+
+ <!--    <div class="size">
+      <span>3</span>
+      <span>6</span>
+      <span>12</span> -->
+
+    <div class="quantity">
+      <button class="add_button" type="button" name="button">
+        <img src="add.png" alt="" />
+      </button>
+      <input id="originalCinnamonRoll type="text" name="name" value="0">
+      <button class="minus_button" type="button" name="button">
+        <img src="minus.png" alt="" />
+      </button>
+    </div>
+    <div class="total-price">$10.99</div>
+  </div>
+     <!-- Product #4 ------------------------------------------------------->
+  <div class="rolls" id="pecanSpice"></div>
+    <div class="buttons">
+    <span class="delete_button" onclick="remove4()"></span>
+    </div>
+
+    <div class="image">
+      <img src="pecan.jpg" alt="" />
+    </div>
+
+    <div class="glazing">
+      <span>None</span>
+      <span>Double Chocolate</span>
+      <span>Milk Sugar</span>
+    </div>
+
+ <!--    <div class="size">
+      <span>3</span>
+      <span>6</span>
+      <span>12</span> -->
+
+    <div class="quantity">
+      <button class="add_button" type="button" name="button">
+        <img src="add.png" alt="" />
+      </button>
+      <input id="pecanSpiceRoll type="text" name="name" value="0">
+      <button class="minus_button" type="button" name="button">
+        <img src="minus.png" alt="" />
+      </button>
+    </div>
+    <div class="total-price">$10.99</div>
+  </div>
+     <!-- Product #5 ------------------------------------------------------->
+    <div class="rolls" id="appleCider"></div>
+    <div class="buttons">
+    <span class="delete_button" onclick="remove5()"></span>
+    </div>
+
+    <div class="image">
+      <img src="apple2.png" alt="" />
+    </div>
+
+    <div class="glazing">
+      <span>None</span>
+      <span>Double Chocolate</span>
+      <span>Milk Sugar</span>
+    </div>
+
+ <!--    <div class="size">
+      <span>3</span>
+      <span>6</span>
+      <span>12</span> -->
+
+    <div class="quantity">
+      <button class="add_button" type="button" name="button">
+        <img src="add.png" alt="" />
+      </button>
+      <input id="appleCiderRoll type="text" name="name" value="0">
+      <button class="minus_button" type="button" name="button">
+        <img src="minus.png" alt="" />
+      </button>
+    </div>
+    <div class="total-price">$10.99</div>
+  </div>
+     <!-- Product #6 ------------------------------------------------------->
+      <div class="rolls" id="lemonLavendar"></div>
+    <div class="buttons">
+    <span class="delete_button" onclick="remove6()"></span>
+    </div>
+
+    <div class="image">
+      <img src="lemon2.png" alt="" />
+    </div>
+
+    <div class="glazing">
+      <span>None</span>
+      <span>Double Chocolate</span>
+      <span>Milk Sugar</span>
+    </div>
+
+ <!--    <div class="size">
+      <span>3</span>
+      <span>6</span>
+      <span>12</span> -->
+
+    <div class="quantity">
+      <button class="add_button" type="button" name="button">
+        <img src="add.png" alt="" />
+      </button>
+      <input id="lemonLavendarRoll type="text" name="name" value="0">
+      <button class="minus_button" type="button" name="button">
+        <img src="minus.png" alt="" />
+      </button>
+    </div>
+    <div class="total-price">$10.99</div>
+  </div>
 </body>

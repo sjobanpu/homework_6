@@ -13,6 +13,7 @@ function addToCart(){
   cart.push(obj);
 
   localStorage.setItem('cart',JSON.stringify(cart));
+  document.getElementById("number").innerHTML=JSON.parse(localStorage.cart).length;
 }
 
 function loadData(){
@@ -21,7 +22,7 @@ function loadData(){
 
 function numberOfOrders(){
   document.getElementById("number").innerHTML=JSON.parse(localStorage.cart).length;
-}
+  }
 
 function makeTable(){
   var cartObject=JSON.parse(cart);
