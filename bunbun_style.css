@@ -205,25 +205,25 @@ li a:hover {
 #NumRolls{
   position:absolute;
   right:180px;
-  bottom:155px;
+  bottom:140px;
 }
 
 #quantity{
   position:absolute;
   right:220px;
-  bottom:150px;
+  bottom:130px;
 }
 
 #glazing{
   position:absolute;
-  bottom:200px;
+  bottom:180px;
   right:180px;
 }
 
 #GlazeType{
   position:absolute;
   right:200px;
-  bottom:205px;
+  bottom:185px;
   text-align:center;
 }
 
