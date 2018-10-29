@@ -1,4 +1,4 @@
 function remove3(){
     var removeDiv=document.getElementById("originalCinnamon");
-    removeDiv.parentNode.removeChild(removeDiv);
+    originalDiv.parentNode.removeChild(originalDiv);
 }

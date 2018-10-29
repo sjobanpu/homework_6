@@ -9,64 +9,63 @@ body {
   margin: 0;
   background-color: aliceblue;
   font-family: 'Charmonman',cursive;
+  font-size:20px;
+  font-color:black;
 }
 
-.Shopping-Cart {
-  width: 750px;
-  height: 600px;
+.shopping-cart {
+  width: 900px;
+  height:800px;
   margin: 80px auto;
   background: #FFFFFF;
   box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
   border-radius: 6px;
-  bottom:900px;
-  left:200px;
 
   display: flex;
   flex-direction: column;
 }
 
-/*.title {
+.title {
   height: 60px;
   border-bottom: 1px solid #E1E8EE;
   padding: 20px 30px;
   color: #5E6977;
   font-size: 18px;
   font-weight: 400;
-}*/
-/*
-.item {
+}
+
+.roll{
   padding: 20px 30px;
   height: 120px;
   display: flex;
-}*/
+}
 
-.item:nth-child(3) {
+.roll:nth-child(3) {
   border-top:  1px solid #E1E8EE;
   border-bottom:  1px solid #E1E8EE;
 }
 
 .buttons {
-  position: relative;
+  position:absolute;
   padding-top: 30px;
   margin-right: 60px;
 }
-.delete_button{
+.delete-btn,
+.like-btn {
   display: inline-block;
   Cursor: pointer;
 }
-.delete_button {
+.delete-btn {
   width: 18px;
   height: 17px;
   background: url("delete-icn.svg") no-repeat center;
 }
 
-}
 .image {
   margin-right: 50px;
 }
 
-Let’s add some basic style to  product name and description.
-.glazing {
+.glazing{
   padding-top: 10px;
   margin-right: 60px;
   width: 115px;
@@ -112,10 +111,10 @@ button[class*=btn] {
   border: none;
   cursor: pointer;
 }
-.minus_button img {
+.minus-btn img {
   margin-bottom: 3px;
 }
-.add_button img {
+.plus-btn img {
   margin-top: 2px;
 }
 
@@ -134,17 +133,21 @@ input:focus {
 }
 
 @media (max-width: 800px) {
-  .Shopping-Cart {
+  .shopping-cart {
     width: 100%;
     height: auto;
     overflow: hidden;
   }
-  .item {
+  .roll{
     height: auto;
     flex-wrap: wrap;
     justify-content: center;
   }
-
+  .image img {
+    width: 10%;
+    height: 10%;
+  }
+  .image,
   .quantity,
   .glazing {
     width: 100%;
@@ -154,4 +157,8 @@ input:focus {
   .buttons {
     margin-right: 20px;
   }
+}
+
+.NavigationOption(){
+  color:black;
 }

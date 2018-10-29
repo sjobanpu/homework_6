@@ -24,14 +24,34 @@ function numberOfOrders(){
   document.getElementById("number").innerHTML=JSON.parse(localStorage.cart).length;
   }
 
-function makeTable(){
-  var cartObject=JSON.parse(cart);
-  for (var i = 0; i < cart.length; i++) {
-    document.getElementById("glazing").innerHTML=cartObject[i].glazing
-    document.getElementById("rolling").innerHTML=cartObject[i].rolling
-    document.getElementById("quantity").innerHTML=cartObject[i],quantity
-  }
-}
+function productName(){
+  "orangeMarmalade":"orange2.png"
+  "lemonLavendar": "lemon2.png"
+  "pecanSpice": "pecan2.png"
+  "pumpkinPecan" : "pumpkin2.png"
+  "appleCider" : "apple2.png"
+  "originalCinnamon" : "original2.png"}
+
+function renderCart(){
+  var cartObject=JSON.parse(localStorage.cart).length;
+  console.log("localStorage.cart.length")
+  var table = document.createElement('table');
+  var name = productName[object.rolling]
+      for (var i = 0; i < cart.length; i++) {
+        var row = '<tr>'+
+                  '<td>'+object.rolling+'</td>' +
+                  '<td>'+"<img src='" + name + ".png'/></td>"+
+                  '<td>'+object.glazing+'</td>' +
+                  '<td>'+object.quantity+'</td>'+
+                  '</tr>';
+        $('table').append(row);
+        $('.shopping-cart').append('table')
+
+        if(obj.Type=='Error') {
+            $('table').find('td:last').after('<td>'+ obj.ErrorCode+'</td>');}
+
+
+
 
 
 
