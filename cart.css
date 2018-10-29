@@ -123,6 +123,16 @@ input:focus {
   outline:0;
 }
 
+td {
+    height: 50px;
+    vertical-align: bottom;
+}
+
+tr {
+  height:30px;
+  vertical-align:bottom;
+  text-align:left;
+}
 .total-price {
   width: 83px;
   padding-top: 27px;
@@ -130,10 +140,6 @@ input:focus {
   font-size: 16px;
   color: #43484D;
   font-weight: 300;
-}
-
-.shopping-cart{
-  vertical-align: text-bottom;
 }
 
 @media (max-width: 800px) {
