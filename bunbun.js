@@ -53,7 +53,7 @@ var productName = {
 }
 
 function renderCart(){
-  var cart=JSON.parse(localStorage.cart);
+  var cart=JSON.parse(localStorage.cart || "[]");
   console.log("localStorage.cart.length")
   for (var i = 0; i < cart.length; i++) {
     var object = cart[i]
@@ -63,32 +63,17 @@ function renderCart(){
     var row = '<tr>'+
               '<td>'+ "<img src=' " + name + "' />" + object.rolling +'</td>' +
               '<td>'+object.glazing+ '</td>' +
-              '<td>'+"<img src='plus.svg'><span class='add'>"+object.quantity+"<img src='minus.png'><span class='minus'>"+'</td>'+
+              '<td>' + object.quantity+'</td>'+
               '<td>'+"$"+(object.quantity*2)+'</td>'+
+              '<td class="delete">'+"<img src='delete-icn.svg'>"+'</td>' +
               '</tr>';
+    localStorage.setItem('cart',JSON.stringify(cart));
     $('#table').append(row);
+    $(".delete").click(del)
   }
-// $(".add").bind("click",add());
 }
- // $(".add").click(add());
 
-  // $(".minus").click(remove())
-
-// function remove(){
-//   var cart = JSON.parse(localStorage.cart);
-//   var glazing = cart[i].glazing;
-//   glazing -= 1;
-// }
-
-// function add(){
-//   var cart = JSON.parse(localStorage.cart);
-//   for (var i = 0; i < cart.length; i++) {
-//     var object = cart[i];
-//     var newQuantity = object.quantity;
-//     console.log("newQuantity");
-//     newQuantity += 1;
-//     console.log("newQuantity")
-//     }
-//   }
-
-
+function del(){
+  var row = this.parentNode //parentnode of td is tr
+  row.parentNode.removeChild(row)
+}
